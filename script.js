@@ -5,20 +5,23 @@ subtraction() - priima du skaičius ir grąžina jų skirtumą.
 multiplication() - priima du skaičius ir grąžina jų daugybos rezultatą;
 division() - priima du skaičius ir grąžina jų dalybos rezultatą;
 ------------------------------------------------------------------------------------ */
-class Calculator {
-  sum(firstNumber, secondNumber) {
-    this.result = firstNumber + secondNumber;
-  }
-
-  subtraction(firstNumber, secondNumber) {
-    this.result = firstNumber - secondNumber;
-  }
-
-  multiplication(firstNumber, secondNumber) {
-    this.result = firstNumber * secondNumber;
-  }
-
-  division(firstNumber, secondNumber) {
-    this.result = firstNumber / secondNumber;
-  }
+function Calculator(firstNumber, secondNumber) {
+  this.firstNumber = firstNumber;
+  this.secondNumber = secondNumber;
 }
+
+Calculator.prototype.sum = function () {
+  return this.firstNumber + this.secondNumber;
+};
+
+Calculator.prototype.subtraction = function () {
+  return this.firstNumber - this.secondNumber;
+};
+
+Calculator.prototype.multiplication = function () {
+  return this.firstNumber * this.secondNumber;
+};
+
+Calculator.prototype.division = function () {
+  return this.firstNumber / this.secondNumber;
+};
